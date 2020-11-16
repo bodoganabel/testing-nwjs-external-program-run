@@ -1,0 +1,17 @@
+{
+    "name": "nw-hello-world",
+    "main": "index.html",
+    "dependencies": {
+        "markdown": "0.5.x"
+    },
+    "devDependencies": {
+        "nw": "^0.49.2",
+        "nwbuild": "^0.0.5"
+    },
+    "scripts": {
+        "start": "nw src/",
+        "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
+    },
+    "version": "1.0.0",
+    "license": "MIT"
+}

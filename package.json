@@ -1,17 +1,31 @@
 {
-    "name": "nw-hello-world",
-    "main": "index.html",
-    "dependencies": {
-        "markdown": "0.5.x"
-    },
-    "devDependencies": {
-        "nw": "^0.49.2",
-        "nwbuild": "^0.0.5"
-    },
-    "scripts": {
-        "start": "nw src/",
-        "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ src/"
-    },
-    "version": "1.0.0",
-    "license": "MIT"
+  "name": "testing-nwjs-external-program-run",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.html",
+  "scripts": {
+    "start": "nw",
+    "build": "nwbuild --platforms \"win32,win64,osx32,osx64,linux32,linux64\""
+  },
+  "window": {
+    "toolbar": false,
+    "resizable": true,
+    "fullscreen": false,
+    "width": 800,
+    "height": 600
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bodoganabel/testing-nwjs-external-program-run.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bodoganabel/testing-nwjs-external-program-run/issues"
+  },
+  "homepage": "https://github.com/bodoganabel/testing-nwjs-external-program-run#readme",
+  "devDependencies": {
+    "nw": "^0.44.1-sdk",
+    "nw-builder": "^3.5.7"
+  }
 }

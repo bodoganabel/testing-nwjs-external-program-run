@@ -5,14 +5,24 @@
   "main": "main.html",
   "scripts": {
     "start": "nw",
-    "build": "nwbuild --platforms \"win32,win64,osx32,osx64,linux32,linux64\""
+    "build": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+    "build-win": "build --tasks win-x86,win-x64 --mirror https://dl.nwjs.io/ .",
+    "obs-build": "nwbuild -v 0.12.3 --platforms win32,win64,osx64,linux32,linux64 --buildDir build/ ./",
+    "obs-build-win": "nwbuild -v 0.12.3 --platforms win32,win64 --buildDir build/ ./"
+  },
+  "build": {
+    "nwVersion": "0.14.7"
   },
   "window": {
     "toolbar": false,
     "resizable": true,
     "fullscreen": false,
     "width": 800,
-    "height": 600
+    "height": 600,
+    "min_width": 800,
+    "min_height": 600,
+    "max_width": 1000,
+    "max_height": 1000
   },
   "repository": {
     "type": "git",
@@ -26,6 +36,7 @@
   "homepage": "https://github.com/bodoganabel/testing-nwjs-external-program-run#readme",
   "devDependencies": {
     "nw": "^0.44.1-sdk",
-    "nw-builder": "^3.5.7"
+    "nw-builder": "^3.5.7",
+    "nwjs-builder-phoenix": "^1.15.0"
   }
 }
